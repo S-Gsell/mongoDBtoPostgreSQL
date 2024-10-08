@@ -1,12 +1,17 @@
 import pg from "pg";
+import * as dotenv from 'dotenv';
+dotenv.config();
+
+
 const { Pool } = pg;
 
+const {USER, HOST, DATABASE, PASSWORD, PORT} = process.env;
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'gamepup',
-    password: 'postgres',
-    port: 5432
+    user: USER,
+    host: HOST,
+    database: DATABASE,
+    password: PASSWORD,
+    port: PORT
 });
 
 let client;
