@@ -1,0 +1,19 @@
+{
+  "name": "javascriptgamedatagetter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steven Gsell",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dataBase": "file:dataBase",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.7.0",
+    "pg": "^8.13.0"
+  }
+}
