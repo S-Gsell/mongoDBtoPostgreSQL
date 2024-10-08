@@ -42,4 +42,9 @@ async function idExists(id){
         .then(res => res.rowCount);
 }
 
-export {connectToPSQL, disconnectFromPSQL, idExists};
+async function isCategory(id){
+    return await client
+        .query(`SELECT category_id FROM category WHERE category_id=${id};`)
+        .then(res => res.rowCount !== 0);
+}
+export {connectToPSQL, disconnectFromPSQL, idExists, isCategory};
